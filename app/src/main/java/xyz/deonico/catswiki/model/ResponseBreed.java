@@ -133,12 +133,23 @@ public class ResponseBreed{
 	@SerializedName("affection_level")
 	private int affectionLevel;
 
+	@SerializedName("breed")
+	private ResponseBreed breed;
+
 	public ResponseBreed(int id, String name, String description, String createdAt, String photo_main) {
 		this.id = id;
 		this.name = name;
 		this.description = description;
 		this.createdAt = createdAt;
 		this.photoMain = photo_main;
+	}
+
+	public void setBreed(ResponseBreed breed){
+		this.breed = breed;
+	}
+
+	public ResponseBreed getBreed(){
+		return breed;
 	}
 
 	public void setSuppressedTail(int suppressedTail){

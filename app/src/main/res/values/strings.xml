@@ -1,4 +1,30 @@
 <resources>
     <string name="app_name">CATS Wiki</string>
-    <string name="price">Rp. 0</string>
+    <string name="title_activity_profile">Profile</string>
+    <string name="action_settings">Settings</string>
+    <string name="cat">Cat</string>
+    <string name="intelligence">Intelligence</string>
+    <string name="adaptability">Adaptability</string>
+    <string name="affectionLevel">Affection Level</string>
+    <string name="childFriendly">Child Friendly</string>
+    <string name="information">Information</string>
+    <string name="temperament">Temperament</string>
+    <string name="description">Description</string>
+    <string name="other">Other Information</string>
+    <string name="origin">Origin</string>
+    <string name="liveSpan">Live Span</string>
+    <string name="weight">Weight</string>
+    <string name="web">Web Reference</string>
+    <string name="wikipedia">Wikipedia</string>
+    <string name="cfa">CFA</string>
+    <string name="vetstreet">Vet Street</string>
+    <string name="vcahospitals">VCA Hospitals</string>
+    <string name="image">Image</string>
+    <string name="github">Github</string>
+    <string name="website">Website</string>
+    <string name="my_name">Deo Fibrianico</string>
+    <string name="title_activity_detail">Detail</string>
+    <string name="name">Name</string>
+    <string name="my_email">nico98deo@gmail.com</string>
+    <string name="email">Email</string>
 </resources>

@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activity.DetailActivity"
+    tools:showIn="@layout/activity_detail">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <TextView
+            android:id="@+id/tvInformationHeader"
+            style="@style/headerText"
+            android:text="@string/information"
+            android:layout_marginBottom="5dp"/>
+
+        <RelativeLayout style="@style/profileDetailsLayout">
+            <ImageView
+                android:id="@+id/ivDescription"
+                android:src="@drawable/cat_description"
+                style="@style/profileDetailsImage" />
+
+            <TextView
+                android:id="@+id/tvDescriptionTitle"
+                android:text="@string/description"
+                android:layout_toRightOf="@id/ivDescription"
+                style="@style/profileDetailsTextMain" />
+
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textSize="12sp"
+                android:textStyle="bold|italic"
+                android:textColor="@color/colorBlack"
+                android:layout_toRightOf="@+id/ivDescription"
+                android:layout_below="@+id/tvDescriptionTitle"
+                android:text="@string/cat" />
+
+            <TextView
+                android:id="@+id/tvIntroduction"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textSize="12sp"
+                android:textColor="@color/colorBlack"
+                android:layout_toRightOf="@+id/ivDescription"
+                android:layout_below="@+id/tvDescription"
+                android:text="@string/cat" />
+
+        </RelativeLayout>
+
+        <View style="@style/proifleDetailsView" />
+
+        <RelativeLayout style="@style/profileDetailsLayout">
+            <ImageView
+                android:id="@+id/ivCharacteristic"
+                android:src="@drawable/cat_characteristic"
+                style="@style/profileDetailsImage" />
+
+            <TextView
+                android:id="@+id/tvTemperamentTitle"
+                android:text="@string/temperament"
+                android:layout_toRightOf="@id/ivCharacteristic"
+                style="@style/profileDetailsTextMain" />
+
+            <TextView
+                android:id="@+id/tvTemperament"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textSize="12sp"
+                android:textStyle="bold|italic"
+                android:textColor="@color/colorBlack"
+                android:layout_toRightOf="@+id/ivCharacteristic"
+                android:layout_below="@+id/tvTemperamentTitle"
+                android:text="@string/cat" />
+
+            <TextView
+                android:id="@+id/tvCharacteristic"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textSize="12sp"
+                android:textColor="@color/colorBlack"
+                android:layout_toRightOf="@+id/ivCharacteristic"
+                android:layout_below="@+id/tvTemperament"
+                android:text="@string/cat" />
+
+        </RelativeLayout>
+
+        <View style="@style/proifleDetailsView" />
+
+        <RelativeLayout style="@style/profileDetailsLayout">
+            <ImageView
+                android:id="@+id/ivOther"
+                android:src="@drawable/cat_other"
+                style="@style/profileDetailsImage" />
+
+            <TextView
+                android:id="@+id/tvOtherTitle"
+                android:text="@string/other"
+                android:layout_toRightOf="@id/ivOther"
+                style="@style/profileDetailsTextMain" />
+
+            <TextView
+                android:id="@+id/tvOriginTitle"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textSize="12sp"
+                android:textStyle="bold|italic"
+                android:textColor="@color/colorBlack"
+                android:layout_toRightOf="@+id/ivOther"
+                android:layout_below="@+id/tvOtherTitle"
+                android:text="@string/origin" />
+
+            <TextView
+                android:id="@+id/tvOrigin"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textSize="12sp"
+                android:textColor="@color/colorBlack"
+                android:layout_toRightOf="@+id/ivOther"
+                android:layout_below="@+id/tvOriginTitle"
+                android:text="@string/cat" />
+
+            <TextView
+                android:id="@+id/tvLiveSpanTitle"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:textSize="12sp"
+                android:textStyle="bold|italic"
+                android:textColor="@color/colorBlack"
+                android:layout_toRightOf="@+id/ivOther"
+                android:layout_below="@+id/tvOrigin"
+                android:text="@string/liveSpan" />
+
+            <TextView
+                android:id="@+id/tvLiveSpan"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textSize="12sp"
+                android:textColor="@color/colorBlack"
+                android:layout_toRightOf="@+id/ivOther"
+                android:layout_below="@+id/tvLiveSpanTitle"
+                android:text="@string/cat" />
+
+            <TextView
+                android:id="@+id/tvLiveWeightTitle"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:textSize="12sp"
+                android:textStyle="bold|italic"
+                android:textColor="@color/colorBlack"
+                android:layout_toRightOf="@+id/ivOther"
+                android:layout_below="@+id/tvLiveSpan"
+                android:text="@string/weight" />
+
+            <TextView
+                android:id="@+id/tvWeight"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textSize="12sp"
+                android:textColor="@color/colorBlack"
+                android:layout_toRightOf="@+id/ivOther"
+                android:layout_below="@+id/tvLiveWeightTitle"
+                android:text="@string/cat" />
+
+        </RelativeLayout>
+
+        <View style="@style/proifleDetailsView" />
+
+        <RelativeLayout style="@style/profileDetailsLayout">
+            <ImageView
+                android:id="@+id/ivWeb"
+                android:src="@drawable/cat_web"
+                style="@style/profileDetailsImage" />
+
+            <TextView
+                android:id="@+id/tvWebTitle"
+                android:text="@string/web"
+                android:layout_toRightOf="@id/ivWeb"
+                style="@style/profileDetailsTextMain" />
+
+            <TextView
+                android:id="@+id/tvWikipedia"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textSize="12sp"
+                android:textStyle="bold|italic"
+                android:textColor="@color/colorBlack"
+                android:layout_toRightOf="@+id/ivWeb"
+                android:layout_below="@+id/tvWebTitle"
+                android:text="@string/wikipedia" />
+
+            <TextView
+                android:id="@+id/tvCfa"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="20dp"
+                android:textSize="12sp"
+                android:textStyle="bold|italic"
+                android:textColor="@color/colorBlack"
+                android:layout_toRightOf="@+id/tvWikipedia"
+                android:layout_below="@+id/tvWebTitle"
+                android:text="@string/cfa" />
+
+            <TextView
+                android:id="@+id/tvVetstreet"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="20dp"
+                android:textSize="12sp"
+                android:textStyle="bold|italic"
+                android:textColor="@color/colorBlack"
+                android:layout_toRightOf="@+id/tvCfa"
+                android:layout_below="@+id/tvWebTitle"
+                android:text="@string/vetstreet" />
+
+            <TextView
+                android:id="@+id/tvVcahospitals"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="20dp"
+                android:textSize="12sp"
+                android:textStyle="bold|italic"
+                android:textColor="@color/colorBlack"
+                android:layout_toRightOf="@+id/tvVetstreet"
+                android:layout_below="@+id/tvWebTitle"
+                android:text="@string/vcahospitals" />
+
+        </RelativeLayout>
+
+        <View style="@style/proifleDetailsView" />
+
+        <RelativeLayout style="@style/profileDetailsLayout">
+
+            <ImageView
+                    android:id="@+id/ivImageCat"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/catnotfound" />
+
+        </RelativeLayout>>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

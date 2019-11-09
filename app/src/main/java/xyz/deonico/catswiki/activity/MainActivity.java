@@ -1,14 +1,15 @@
-package xyz.deonico.catswiki;
+package xyz.deonico.catswiki.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -20,6 +21,7 @@ import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
+import xyz.deonico.catswiki.R;
 import xyz.deonico.catswiki.adapter.BreedAdapter;
 import xyz.deonico.catswiki.api.BaseApiService;
 import xyz.deonico.catswiki.api.UtilsApi;
@@ -31,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
     ProgressBar pbLoading;
     @BindView(R.id.rvRepos)
     RecyclerView rvRepos;
+    @BindView(R.id.ivProfile)
+    ImageView ivProfile;
 
     BaseApiService mApiService;
     BreedAdapter mRepoAdapter;
@@ -44,6 +48,13 @@ public class MainActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
+        ivProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ProfileActivity.class));
+            }
+        });
+
         mApiService = UtilsApi.getAPIService();
 
         mRepoAdapter = new BreedAdapter(this, repoList, null);
@@ -52,13 +63,13 @@ public class MainActivity extends AppCompatActivity {
         rvRepos.setHasFixedSize(true);
         rvRepos.setAdapter(mRepoAdapter);
 
-        requestRepos();
+        requestBreedList();
     }
 
-    private void requestRepos() {
+    private void requestBreedList() {
         pbLoading.setVisibility(View.VISIBLE);
 
-        mApiService.requestResponse()
+        mApiService.requestResponseList()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Observer<List<ResponseBreed>>() {
@@ -88,15 +99,13 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onComplete() {
                         pbLoading.setVisibility(View.GONE);
-                        Toast.makeText(MainActivity.this, "Berhasil mengambil data", Toast.LENGTH_SHORT).show();
-
                         mRepoAdapter = new BreedAdapter(MainActivity.this, repoList, null);
                         rvRepos.setAdapter(mRepoAdapter);
 
                         mRepoAdapter.setOnClickListener(new BreedAdapter.OnItemClickListener() {
                             @Override
                             public void onItemClick(int position) {
-                                Toast.makeText(MainActivity.this, "Berhasil", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(MainActivity.this, DetailActivity.class).putExtra("id", repoList.get(position).getId()).putExtra("name", repoList.get(position).getName()));
                             }
                         });
                         mRepoAdapter.notifyDataSetChanged();
