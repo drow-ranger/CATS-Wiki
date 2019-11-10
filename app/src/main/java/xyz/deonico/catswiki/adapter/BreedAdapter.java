@@ -49,7 +49,7 @@ public class BreedAdapter extends
     public void onBindViewHolder(ViewHolder holder, int position) {
         ResponseBreed item = list.get(position);
 
-        String base_image_url = "http://10.10.101.30:3000/img/breed/";
+        String base_image_url = "https://catapi.deonico.xyz/img/breed/";
         DateTime dateTime  = DateTime.parse(item.getCreatedAt(), DateTimeFormat.forPattern("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"));
 
         int id = item.getId();
@@ -93,7 +93,7 @@ public class BreedAdapter extends
             super(itemView);
             ButterKnife.bind(this, itemView);
 
-            ivPhoto.setOnClickListener(new View.OnClickListener() {
+            itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     if (listener != null) {

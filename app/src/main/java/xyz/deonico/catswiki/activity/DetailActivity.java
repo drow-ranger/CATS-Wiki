@@ -104,7 +104,7 @@ public class DetailActivity extends AppCompatActivity {
                 public void onResponse(Call<ResponseBreedSpecific> call, Response<ResponseBreedSpecific> response) {
                     if (response.isSuccessful()){
 
-                        String base_image_url = "http://10.10.101.30:3000/img/breed/";
+                        String base_image_url = "https://catapi.deonico.xyz/img/breed/";
 
                         String photo_main = response.body().getBreed().getPhotoMain();
                         String photo_1 = response.body().getBreed().getPhoto1();
@@ -235,6 +235,10 @@ public class DetailActivity extends AppCompatActivity {
     }
 
     private void openURL(String url) {
-        startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse(url)));
+        if (url == ""){
+            Toast.makeText(this, "Sorry.. Link is not available", Toast.LENGTH_SHORT).show();
+        } else {
+            startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse(url)));
+        }
     }
 }

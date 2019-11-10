@@ -59,7 +59,7 @@
                         android:layout_marginTop="5dp"
                         android:textSize="18dp"
                         android:text="@string/my_name"
-                        android:textColor="@color/colorBlack"
+                        android:textColor="@color/colorPrimaryDark"
                         android:textStyle="bold|italic" />
 
                 </LinearLayout>
@@ -229,6 +229,30 @@
                     android:layout_toRightOf="@+id/ivDescription"
                     android:layout_below="@+id/tvEmailTitle"
                     android:text="@string/my_email" />
+
+                <TextView
+                    android:id="@+id/tvAboutTitle"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:textSize="12sp"
+                    android:textStyle="bold|italic"
+                    android:textColor="@color/colorBlack"
+                    android:layout_toRightOf="@+id/ivDescription"
+                    android:layout_below="@+id/tvEmail"
+                    android:text="@string/about" />
+
+                <TextView
+                    android:id="@+id/tvAbout"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorBlack"
+                    android:layout_toRightOf="@+id/ivDescription"
+                    android:layout_below="@+id/tvAboutTitle"
+                    android:text="@string/about_detail" />
 
             </RelativeLayout>
 

@@ -27,4 +27,6 @@
     <string name="name">Name</string>
     <string name="my_email">nico98deo@gmail.com</string>
     <string name="email">Email</string>
+    <string name="about">About</string>
+    <string name="about_detail">This application contains information about cat breeds. All information and images in this application are sourced from various internet references that I have summarized at https://catapi.deonico.xyz/</string>
 </resources>

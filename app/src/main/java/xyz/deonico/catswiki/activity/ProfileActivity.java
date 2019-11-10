@@ -50,7 +50,7 @@ public class ProfileActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        String base_image_url = "http://10.10.101.30:3000/img/profile/";
+        String base_image_url = "https://catapi.deonico.xyz/img/profile/";
         String base_github_url = "https://github.com/";
         String base_domain_url = "https://deonico.xyz";
 
